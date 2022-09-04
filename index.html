@@ -21,7 +21,11 @@
           <span class="sale_span">Sale</span>
         </div>
       </div>
-      <div class="form">
+      <div
+        class="form"
+        methode="POST"
+        action="https://script.google.com/macros/s/AKfycbyGsJ2hFOmRZPL9qDJrLNxmtxEm6TmPZyxQ0099EdDHvMcKk6RTJy6ccgTd9rM3cmvP/exec"
+      >
         <div class="es_form"><p class="promotion">عرض خاص : 2300 دج</p></div>
         <div class="es_form">
           <p class="grey">إملأ الاستمارة أسفله ! لشراء المنتج</p>
@@ -36,6 +40,9 @@
             <div class="col_9">
               <div class="input">
                 <input
+                  required="required"
+                  name="first_name"
+                  id="first_name"
                   class="form-control"
                   placeholder="الاسم الكامل / Nom complet"
                   type="text"
@@ -48,12 +55,15 @@
           <div class="row">
             <div class="col_3">
               <label style="text-align: right"
-                >الهاتف <span style="font-family: Arial">*</span></label
+                >الهاتف<span style="font-family: Arial">*</span></label
               >
             </div>
             <div class="col_9">
               <div class="input">
                 <input
+                  required="required"
+                  name="phone"
+                  id="phone"
                   class="form-control"
                   placeholder="الهاتف / téléphone"
                   type="text"
@@ -71,7 +81,14 @@
             </div>
             <div class="col_9">
               <div class="input">
-                <input class="form-control" placeholder="الولاية" type="text" />
+                <input
+                  class="form-control"
+                  required="required"
+                  name="city"
+                  id="city"
+                  placeholder="الولاية"
+                  type="text"
+                />
               </div>
             </div>
           </div>
@@ -85,134 +102,625 @@
             </div>
             <div class="col_9">
               <div class="input">
-                <input class="form-control" placeholder="البلدية" type="text" />
+                <input
+                  class="form-control"
+                  required="required"
+                  name="province"
+                  id="province"
+                  placeholder="البلدية"
+                  type="text"
+                />
               </div>
             </div>
           </div>
         </div>
         <div class="es_form">
-          <div>
-            <hr class="es_hr" />
-            <div><button class="es_button">اشتري الأن</button></div>
+          <hr class="es_hr" />
+          <button class="es_button" id="myBtn">اشتري الأن</button>
+        </div>
+      </div>
+    </div>
+    <div class="phone">
+      <img
+        alt=""
+        src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/0001_480x480.jpg?v=1661211913"
+        style="display: block; margin: 0 auto; width: 50%"
+      />
+      <h3
+        style="
+          text-align: center;
+          color: rgb(255, 0, 0);
+          font-size: 25px;
+          word-break: break-word;
+          margin-top: 2rem;
+        "
+      >
+        تعبت من الصراصير و مالقيتش الحل ؟؟وش راك تسنى ؟؟
+      </h3>
+      <h4
+        style="
+          text-align: center;
+          color: rgb(7, 198, 70);
+          font-size: 25px;
+          word-break: break-word;
+          margin-top: 3rem;
+        "
+      >
+        قبل الاستعمال
+      </h4>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/002_480x480.png?v=1661211924"
+        alt=""
+        style="display: block; margin: 0 auto; width: 50%; margin-top: 3rem"
+        width="448"
+        height="252"
+        data-mce-fragment="1"
+        data-mce-src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/002_480x480.png?v=1661211924"
+      />
+      <h4
+        style="
+          text-align: center;
+          color: rgb(7, 198, 70);
+          font-size: 25px;
+          word-break: break-word;
+          margin-top: 3rem;
+        "
+      >
+        لحظة استعمال المبيد و انجذاب الصراصير نحو الطعم
+      </h4>
+      <img
+        alt=""
+        src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/0005_480x480.png?v=1661211987"
+        style="display: block; margin: 0 auto; width: 50%; margin-top: 3rem"
+        width="466"
+        height="265"
+      />
+      <h4
+        style="
+          text-align: center;
+          color: rgb(7, 198, 70);
+          font-size: 25px;
+          word-break: break-word;
+          margin-top: 3rem;
+        "
+      >
+        بعد الاستعمال
+      </h4>
+      <img
+        alt=""
+        src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/003_480x480.png?v=1661211933"
+        style="display: block; margin: 0 auto; width: 50%; margin-top: 3rem"
+        width="469"
+        height="263"
+      />
+      <p
+        style="
+          text-align: center;
+          font-size: 16px;
+          font-style: italic;
+          font-weight: 700;
+          word-break: break-word;
+          margin-top: 3rem;
+        "
+      >
+        منتجنا اصلي و فتاك و فعاليته عالية جدا يضمن لك نتائج تدوم لعدة اشهر
+      </p>
+      <p
+        style="
+          text-align: center;
+          color: rgb(247, 9, 9);
+          font-size: 25px;
+          font-weight: 700;
+          margin-top: 3rem;
+        "
+      >
+        اراء البعض من زبنائنا حول المنتج
+      </p>
+      <img
+        src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/cmnt2_480x480.png?v=1661287822"
+        style="display: block; margin: 0 auto; width: 50%; margin-top: 3rem"
+        alt=""
+        data-mce-fragment="1"
+        data-mce-src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/cmnt2_480x480.png?v=1661287822"
+      />
+    </div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="carding">
+          <div class="top">
+            <div class="title">
+              <p style="text-align: center; line-height: 1.5">
+                <strong
+                  style="
+                    background-color: rgb(255, 0, 0);
+                    font-size: 30px;
+                    color: rgb(255, 255, 255);
+                  "
+                  class="text-right"
+                >
+                  اشتري علبتين و احصل على الثالثة مجانا + توصيل مجاني للبيت
+                </strong>
+              </p>
+              <p
+                style="
+                  text-align: center;
+                  margin-top: 5rem;
+                  margin-bottom: 2rem;
+                "
+              >
+                <span style="font-size: 16px"
+                  ><strong
+                    style="
+                      background-color: rgb(0, 0, 0);
+                      color: rgb(255, 255, 255);
+                      font-size: 24px;
+                    "
+                    class="text-left"
+                  >
+                    اشتري الآن قبل أن ينتهي العرض
+                  </strong></span
+                >
+              </p>
+            </div>
+            <div data-v-bd05d20e="" class="es_timer">00:00:00</div>
+          </div>
+          <hr />
+          <div class="bt">
+            <div class="buttom">
+              <span class="special">عرض خاص</span>
+              <div class="pricing_holder">
+                <div class="one">دج 4,600.00</div>
+                <div class="two">دج 82,000.00</div>
+              </div>
+              <button
+                style="background-color: rgb(4, 193, 0)"
+                class="btin"
+                id="btn1"
+              >
+                نعم نشري 2
+              </button>
+              <button
+                style="background-color: rgb(255, 0, 0)"
+                class="btin"
+                id="btn2"
+              >
+                لا شكرا
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="phone">
-        <img
-          alt=""
-          src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/0001_480x480.jpg?v=1661211913"
-          style="display: block; margin-left: auto; margin-right: auto"
-        />
-        <h3
-          style="
-            text-align: center;
-            color: rgb(255, 0, 0);
-            font-size: 25px;
-            word-break: break-word;
-            margin-top: 2rem;
-          "
-        >
-          تعبت من الصراصير و مالقيتش الحل ؟؟وش راك تسنى ؟؟
-        </h3>
-        <h4
-          style="
-            text-align: center;
-            color: rgb(7, 198, 70);
-            font-size: 25px;
-            word-break: break-word;
-            margin-top: 3rem;
-          "
-        >
-          قبل الاستعمال
-        </h4>
-        <img
-        src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/002_480x480.png?v=1661211924"
-        alt="" style="display: block; margin-left: auto; margin-right: auto ;
-        margin-top: 3rem; "" width="448" height="252" data-mce-fragment="1"
-        data-mce-src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/002_480x480.png?v=1661211924"
-        />
-        <h4
-          style="
-            text-align: center;
-            color: rgb(7, 198, 70);
-            font-size: 25px;
-            word-break: break-word;
-            margin-top: 3rem;
-          "
-        >
-          لحظة استعمال المبيد و انجذاب الصراصير نحو الطعم
-        </h4>
-        <img
-          alt=""
-          src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/0005_480x480.png?v=1661211987"
-          style="
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 3rem;
-          "
-          width="466"
-          height="265"
-        />
-        <h4
-          style="
-            text-align: center;
-            color: rgb(7, 198, 70);
-            font-size: 25px;
-            word-break: break-word;
-            margin-top: 3rem;
-          "
-        >
-          بعد الاستعمال
-        </h4>
-        <img
-          alt=""
-          src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/003_480x480.png?v=1661211933"
-          style="
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 3rem;
-          "
-          width="469"
-          height="263"
-        />
-        <p
-          style="
-            text-align: center;
-            font-size: 16px;
-            font-style: italic;
-            font-weight: 700;
-            word-break: break-word;
-            margin-top: 3rem;
-          "
-        >
-          منتجنا اصلي و فتاك و فعاليته عالية جدا يضمن لك نتائج تدوم لعدة اشهر
-        </p>
-        <p
-          style="
-            text-align: center;
-            color: rgb(247, 9, 9);
-            font-size: 25px;
-            font-weight: 700;
-            margin-top: 3rem;
-          "
-        >
-          اراء البعض من زبنائنا حول المنتج
-        </p>
-        <img
-          src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/cmnt2_480x480.png?v=1661287822"
-          style="
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 3rem;
-          "
-          alt=""
-          data-mce-fragment="1"
-          data-mce-src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/cmnt2_480x480.png?v=1661287822"
-        />
+    </div>
+    <div id="myModal2" class="modal2">
+      <div class="modal-content2">
+        <span class="close2">&times;</span>
+        <div class="carding">
+          <div class="thank">
+            <p class="p_thank">شُكرا جزيلا على ثِقتكم</p>
+            <p class="success">تم استلام الطلب بنجاح!</p>
+            <p class="day">
+              سيستغرق بعدها 1 الى 3 ايام لتوصيل طلبكم بخدمة الدفع عند الإستلام.
+            </p>
+            <div class="validate">
+              <h3
+                style="
+                  font-size: 14px;
+                  box-sizing: border-box;
+                  margin: 0px;
+                  cursor: auto;
+                  color: rgb(26, 26, 26);
+                  font-family: Cairo, sans-serif;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  background-color: rgb(255, 255, 255);
+                  user-select: text;
+                "
+              >
+                <span
+                  class="fr-emoticon fr-deletable fr-emoticon-img"
+                  style="
+                    box-sizing: border-box;
+                    font-weight: normal;
+                    font-family: Apple Color Emoji, Segoe UI Emoji,
+                      NotoColorEmoji, Segoe UI Symbol, Android Emoji,
+                      EmojiSymbols;
+                    display: inline-block;
+                    line-height: 1;
+                    font-size: inherit;
+                    height: 1em;
+                    width: 1em;
+                    min-height: 20px;
+                    min-width: 20px;
+                    vertical-align: middle;
+                    margin: -0.1em 0.1em 0.1em;
+                    background: url(https://cdnjs.cloudflare.com/ajax/libs/emojione/2.0.1/assets/svg/2705.svg);
+                  "
+                >
+                </span>
+                <span
+                  style="
+                    box-sizing: border-box;
+                    font-size: 18px;
+                    user-select: text;
+                  "
+                  ><span
+                    style="
+                      box-sizing: border-box;
+                      color: rgb(41, 105, 176);
+                      user-select: text;
+                    "
+                    ><strong style="box-sizing: border-box; font-weight: 700"
+                      >اسعار التوصيل:</strong
+                    ></span
+                  ></span
+                >
+              </h3>
+              <h3
+                style="
+                  font-size: 14px;
+                  box-sizing: border-box;
+                  margin: 0px;
+                  cursor: auto;
+                  color: rgb(26, 26, 26);
+                  font-family: Cairo, sans-serif;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  background-color: rgb(255, 255, 255);
+                  user-select: text !important;
+                "
+              >
+                <span style="box-sizing: border-box; font-size: 18px"
+                  >الجزائر العاصمة 400 دج</span
+                >
+              </h3>
+              <h3
+                style="
+                  font-size: 14px;
+                  box-sizing: border-box;
+                  margin: 0px;
+                  cursor: auto;
+                  color: rgb(26, 26, 26);
+                  font-family: Cairo, sans-serif;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  background-color: rgb(255, 255, 255);
+                  user-select: text !important;
+                "
+              >
+                <span style="box-sizing: border-box; font-size: 18px"
+                  >ولايات الجنوب 800 دج</span
+                >
+              </h3>
+              <h3
+                style="
+                  font-size: 14px;
+                  box-sizing: border-box;
+                  margin: 0px;
+                  cursor: auto;
+                  color: rgb(26, 26, 26);
+                  font-family: Cairo, sans-serif;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  background-color: rgb(255, 255, 255);
+                  user-select: text !important;
+                "
+              >
+                <span style="box-sizing: border-box; font-size: 18px"
+                  >باقي الويالات 600 دج</span
+                >
+              </h3>
+              <p
+                style="
+                  box-sizing: border-box;
+                  word-break: break-word;
+                  margin: 0px 0px 10px;
+                  margin-top: 3rem;
+                  cursor: auto;
+                  color: rgb(26, 26, 26);
+                  font-family: Cairo, sans-serif;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  font-weight: 400;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  background-color: rgb(255, 255, 255);
+                  font-size: 14px;
+                  user-select: text !important;
+                "
+              >
+                نحن دائما مستعدين لخدمتكم<br style="box-sizing: border-box" />
+              </p>
+              <h3
+                style="
+                  box-sizing: border-box;
+                  margin: 0px;
+                  cursor: auto;
+                  font-style: normal;
+                  font-variant-ligatures: normal;
+                  font-variant-caps: normal;
+                  letter-spacing: normal;
+                  orphans: 2;
+                  text-indent: 0px;
+                  text-transform: none;
+                  white-space: normal;
+                  widows: 2;
+                  word-spacing: 0px;
+                  -webkit-text-stroke-width: 0px;
+                  text-decoration-thickness: initial;
+                  text-decoration-style: initial;
+                  text-decoration-color: initial;
+                  color: rgb(65, 65, 65);
+                  font-family: sans-serif;
+                  background-color: rgb(255, 255, 255);
+                  user-select: text !important;
+                "
+              >
+                <div
+                  style="
+                    box-sizing: border-box;
+                    overflow-wrap: break-word;
+                    margin: 10px 0px 0px;
+                    color: rgb(26, 26, 26);
+                    font-family: Cairo, sans-serif;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-weight: 400;
+                    letter-spacing: normal;
+                    orphans: 2;
+                    text-indent: 0px;
+                    text-transform: none;
+                    white-space: normal;
+                    widows: 2;
+                    word-spacing: 0px;
+                    -webkit-text-stroke-width: 0px;
+                    text-decoration-thickness: initial;
+                    text-decoration-style: initial;
+                    text-decoration-color: initial;
+                    font-size: 14px;
+                  "
+                >
+                  <h3
+                    style="
+                      box-sizing: border-box;
+                      margin: 0px;
+                      cursor: auto;
+                      font-style: normal;
+                      font-variant-ligatures: normal;
+                      font-variant-caps: normal;
+                      letter-spacing: normal;
+                      orphans: 2;
+                      text-indent: 0px;
+                      text-transform: none;
+                      white-space: normal;
+                      widows: 2;
+                      word-spacing: 0px;
+                      -webkit-text-stroke-width: 0px;
+                      text-decoration-thickness: initial;
+                      text-decoration-style: initial;
+                      text-decoration-color: initial;
+                      color: rgb(65, 65, 65);
+                      font-family: sans-serif;
+                      background-color: rgb(255, 255, 255);
+                      user-select: text !important;
+                    "
+                  >
+                    <span
+                      style="
+                        box-sizing: border-box;
+                        user-select: text !important;
+                        font-family: inherit !important;
+                        font-size: 18px;
+                      "
+                      ><span
+                        style="
+                          box-sizing: border-box;
+                          color: rgb(251, 160, 38);
+                          user-select: text !important;
+                          font-family: inherit !important;
+                        "
+                        ><div
+                          style="
+                            box-sizing: border-box;
+                            overflow-wrap: break-word;
+                            margin: 10px 0px 0px;
+                            color: rgb(26, 26, 26);
+                            font-family: Cairo, sans-serif;
+                            font-style: normal;
+                            font-variant-ligatures: normal;
+                            font-variant-caps: normal;
+                            font-weight: 400;
+                            letter-spacing: normal;
+                            orphans: 2;
+                            text-indent: 0px;
+                            text-transform: none;
+                            white-space: normal;
+                            widows: 2;
+                            word-spacing: 0px;
+                            -webkit-text-stroke-width: 0px;
+                            text-decoration-thickness: initial;
+                            text-decoration-style: initial;
+                            text-decoration-color: initial;
+                            font-size: 14px;
+                          "
+                        >
+                          <h3
+                            style="
+                              box-sizing: border-box;
+                              margin: 0px;
+                              cursor: auto;
+                              font-style: normal;
+                              font-variant-ligatures: normal;
+                              font-variant-caps: normal;
+                              letter-spacing: normal;
+                              orphans: 2;
+                              text-indent: 0px;
+                              text-transform: none;
+                              white-space: normal;
+                              widows: 2;
+                              word-spacing: 0px;
+                              -webkit-text-stroke-width: 0px;
+                              text-decoration-thickness: initial;
+                              text-decoration-style: initial;
+                              text-decoration-color: initial;
+                              color: rgb(65, 65, 65);
+                              font-family: sans-serif;
+                              background-color: rgb(255, 255, 255);
+                              user-select: text !important;
+                            "
+                          >
+                            <span
+                              style="
+                                box-sizing: border-box;
+                                font-size: 18px;
+                                color: rgb(209, 72, 65);
+                                user-select: text !important;
+                                font-family: inherit !important;
+                              "
+                              ><span>&nbsp;</span
+                              ><span
+                                style="
+                                  box-sizing: border-box;
+                                  font-weight: 400;
+                                  font-family: AppleColorEmoji, SegoeUIEmoji,
+                                    NotoColorEmoji, SegoeUISymbol, AndroidEmoji,
+                                    EmojiSymbols;
+                                  display: inline-block;
+                                  line-height: 1;
+                                  font-size: inherit;
+                                  height: 1em;
+                                  width: 1em;
+                                  min-height: 20px;
+                                  min-width: 20px;
+                                  vertical-align: middle;
+                                  background: url('https://cdnjs.cloudflare.com/ajax/libs/emojione/2.0.1/assets/svg/1f60d.svg');
+                                "
+                                >&nbsp;</span
+                              >&nbsp;</span
+                            ><br />
+                          </h3>
+                          <br />
+                        </div>
+                        <p
+                          style="
+                            font-size: 18px;
+                            box-sizing: border-box;
+                            word-break: break-word;
+                            margin: 0px;
+                          "
+                        >
+                          <br /></p></span
+                    ></span>
+                  </h3>
+                </div>
+              </h3>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      var modal2 = document.getElementById("myModal2");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+      var btn1 = document.getElementById("btn1");
+      var btn2 = document.getElementById("btn2");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      var span2 = document.getElementsByClassName("close2")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+        modal2.style.display = "block";
+      };
+      span2.onclick = function () {
+        modal2.style.display = "none";
+      };
+      btn1.onclick = function () {
+        modal.style.display = "none";
+        modal2.style.display = "block";
+      };
+      btn2.onclick = function () {
+        modal.style.display = "none";
+        modal2.style.display = "block";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          modal2.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
