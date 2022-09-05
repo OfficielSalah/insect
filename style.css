@@ -372,7 +372,7 @@
   font-weight: 700;
   font-size: 26px;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .success {
   color: white;
@@ -380,7 +380,7 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-  width: 35%;
+  width: 40%;
   margin: 0 auto;
   font-weight: 700;
   font-size: 14px;
@@ -417,6 +417,9 @@
   .star {
     height: 30px;
     width: 30px;
+  }
+  .p_thank {
+    font-size: 20px;
   }
 }
 
