@@ -743,8 +743,6 @@
         } else {
           modal.style.display = "block";
         }
-
-        /*content.classList.add("blur");*/
       };
 
       // When the user clicks on <span> (x), close the modal
@@ -755,27 +753,31 @@
       let formul = document.getElementById("formulaire");
 
       btn1.onclick = function () {
-        let prod = 3;
-        let element = document.createElement("INPUT");
-        element.setAttribute("type", "text");
-        element.setAttribute("value", prod);
-        element.setAttribute("name", "produit");
-        formul.appendChild(element);
-        formul.submit();
+        FD.append("first_name", first_name);
+        FD.append("phone", phone);
+        FD.append("city", city);
+        FD.append("province", province);
+        FD.append("produit", 3);
+        XHR.open(
+          "POST",
+          "https://script.google.com/macros/s/AKfycbxCya7py4mR6Ghtq8pGhVgiiAUnMWX1W36S92nUCQwqsFXf7IocC7dAKEhTBik5gqFr/exec"
+        );
+        XHR.send(FD);
         modal.style.display = "none";
         modal2.style.display = "block";
       };
 
       btn2.onclick = function () {
-        const evt = new Event("submit", { bubbles: true, cancelable: false });
-        let prod = 1;
-        let element = document.createElement("INPUT");
-        element.setAttribute("type", "text");
-        element.setAttribute("value", prod);
-        element.setAttribute("name", "produit");
-        formul.appendChild(element);
-        formul.dispatchEvent(evt);
-        //formul.submit();
+        FD.append("first_name", first_name);
+        FD.append("phone", phone);
+        FD.append("city", city);
+        FD.append("province", province);
+        FD.append("produit", 1);
+        XHR.open(
+          "POST",
+          "https://script.google.com/macros/s/AKfycbxCya7py4mR6Ghtq8pGhVgiiAUnMWX1W36S92nUCQwqsFXf7IocC7dAKEhTBik5gqFr/exec"
+        );
+        XHR.send(FD);
         modal.style.display = "none";
         modal2.style.display = "block";
       };
@@ -792,22 +794,28 @@
       let phone = null;
       let city = null;
       let province = null;
+
       function handlechangename() {
         first_name = document.getElementById("first_name").value;
       }
       function handlechangephone() {
         phone = document.getElementById("phone").value;
-        /*var form = document.createElement("form");
-        form.method = "POST";
-        form.action =
-          "https://script.google.com/macros/s/AKfycbxLohNDl8Of4ikO8mNlnrcyyRAMdsd89nseaBEXMg8E1H28UYzcQMqGSsrxhYTBw5Kz/exec";
-        let input = document.createElement("input");
-        input.type = "text";
-        input.value = phone;
-        input.name = "phone";
-        form.appendChild(input);
-        document.body.appendChild(form);
-        form.submit();*/
+
+        if (first_name !== null) {
+          FD.append("first_name", first_name);
+        }
+        if (city !== null) {
+          FD.append("city", city);
+        }
+        if (province !== null) {
+          FD.append("province", province);
+        }
+        FD.append("phone", phone);
+        XHR.open(
+          "POST",
+          "https://script.google.com/macros/s/AKfycbxLohNDl8Of4ikO8mNlnrcyyRAMdsd89nseaBEXMg8E1H28UYzcQMqGSsrxhYTBw5Kz/exec"
+        );
+        XHR.send(FD);
       }
       function handlechangecity() {
         city = document.getElementById("city").value;
