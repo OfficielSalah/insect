@@ -55,8 +55,8 @@
           </ul>
         </div>
         <div class="price_holder">
-          <div class="price_bar">دج 3,150.00</div>
-          <div class="price">دج 2,300.00</div>
+          <div class="price_bar">3,150 دج</div>
+          <div class="price">2،300 دج</div>
           <span class="sale_span">تخفيض</span>
         </div>
       </div>
@@ -195,7 +195,9 @@
                     >
                   </p>
                 </div>
-                <div data-v-bd05d20e="" class="es_timer">00:00:00</div>
+                <div data-v-bd05d20e="" class="es_timer">
+                  <p id="timer"></p>
+                </div>
               </div>
               <hr />
               <div class="bt">
@@ -719,12 +721,41 @@
       </div>
     </div>
     <script>
+      function timer() {
+        document.getElementById("timer").innerHTML = 5 + ":" + 00;
+        startTimer();
+      }
+
+      function startTimer() {
+        var presentTime = document.getElementById("timer").innerHTML;
+        var timeArray = presentTime.split(/[:]+/);
+        var m = timeArray[0];
+        var s = checkSecond(timeArray[1] - 1);
+        if (s == 59) {
+          m = m - 1;
+        }
+        if (m < 0) {
+          return;
+        }
+        document.getElementById("timer").innerHTML = m + ":" + s;
+        setTimeout(startTimer, 1000);
+      }
+
+      function checkSecond(sec) {
+        if (sec < 10 && sec >= 0) {
+          sec = "0" + sec;
+        } // add zero in front of numbers < 10
+        if (sec < 0) {
+          sec = "59";
+        }
+        return sec;
+      }
+
       // Get the modal
       var modal = document.getElementById("myModal");
       var modal2 = document.getElementById("myModal2");
       var content = document.getElementsByClassName("content")[0];
       const XHR = new XMLHttpRequest();
-      const FD = new FormData();
 
       // Get the button that opens the modal
       var btn = document.getElementById("myBtn");
@@ -742,6 +773,7 @@
           alert("رقم الهاتف ضروري");
         } else {
           modal.style.display = "block";
+          timer();
         }
       };
 
@@ -753,6 +785,7 @@
       let formul = document.getElementById("formulaire");
 
       btn1.onclick = function () {
+        const FD = new FormData();
         FD.append("first_name", first_name);
         FD.append("phone", phone);
         FD.append("city", city);
@@ -768,6 +801,7 @@
       };
 
       btn2.onclick = function () {
+        const FD = new FormData();
         FD.append("first_name", first_name);
         FD.append("phone", phone);
         FD.append("city", city);
@@ -800,6 +834,7 @@
       }
       function handlechangephone() {
         phone = document.getElementById("phone").value;
+        const FD = new FormData();
 
         if (first_name !== null) {
           FD.append("first_name", first_name);
