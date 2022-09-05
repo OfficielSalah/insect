@@ -12,19 +12,59 @@
     <title>insect</title>
   </head>
   <body>
+    <div class="header">
+      <h1>للطلب اتصل بنا 0770982308</h1>
+    </div>
+    <img
+      src="//cdn.shopify.com/s/files/1/0659/0981/7571/files/LOGO_INSEC.jpg?v=1661181289"
+      alt="insectprotect"
+      srcset="
+        //cdn.shopify.com/s/files/1/0659/0981/7571/files/LOGO_INSEC.jpg?v=1661181289&amp;width=50   50w,
+        //cdn.shopify.com/s/files/1/0659/0981/7571/files/LOGO_INSEC.jpg?v=1661181289&amp;width=100 100w,
+        //cdn.shopify.com/s/files/1/0659/0981/7571/files/LOGO_INSEC.jpg?v=1661181289&amp;width=150 150w,
+        //cdn.shopify.com/s/files/1/0659/0981/7571/files/LOGO_INSEC.jpg?v=1661181289&amp;width=200 200w,
+        //cdn.shopify.com/s/files/1/0659/0981/7571/files/LOGO_INSEC.jpg?v=1661181289&amp;width=250 250w,
+        //cdn.shopify.com/s/files/1/0659/0981/7571/files/LOGO_INSEC.jpg?v=1661181289&amp;width=300 300w,
+        //cdn.shopify.com/s/files/1/0659/0981/7571/files/LOGO_INSEC.jpg?v=1661181289&amp;width=400 400w,
+        //cdn.shopify.com/s/files/1/0659/0981/7571/files/LOGO_INSEC.jpg?v=1661181289&amp;width=500 500w
+      "
+      width="140"
+      height="140"
+      class="logo"
+    />
     <div class="content">
       <div class="product">
-        <div class="product_title"><h1>2 مبيد الحقنة قاهر الصراصير</h1></div>
+        <div class="product_title"><h1>مبيد الحقنة قاهر الصراصير 2</h1></div>
+        <div class="stars">
+          <ul class="list">
+            <li>
+              <div class="star"></div>
+            </li>
+            <li>
+              <div class="star"></div>
+            </li>
+            <li>
+              <div class="star"></div>
+            </li>
+            <li>
+              <div class="star"></div>
+            </li>
+            <li>
+              <div class="star"></div>
+            </li>
+          </ul>
+        </div>
         <div class="price_holder">
-          <div class="price">دج 2,300.00</div>
           <div class="price_bar">دج 3,150.00</div>
-          <span class="sale_span">Sale</span>
+          <div class="price">دج 2,300.00</div>
+          <span class="sale_span">تخفيض</span>
         </div>
       </div>
-      <div
+      <form
         class="form"
-        methode="POST"
-        action="https://script.google.com/macros/s/AKfycbyGsJ2hFOmRZPL9qDJrLNxmtxEm6TmPZyxQ0099EdDHvMcKk6RTJy6ccgTd9rM3cmvP/exec"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbxCya7py4mR6Ghtq8pGhVgiiAUnMWX1W36S92nUCQwqsFXf7IocC7dAKEhTBik5gqFr/exec"
+        id="formulaire"
       >
         <div class="es_form"><p class="promotion">عرض خاص : 2300 دج</p></div>
         <div class="es_form">
@@ -40,12 +80,12 @@
             <div class="col_9">
               <div class="input">
                 <input
-                  required="required"
                   name="first_name"
                   id="first_name"
                   class="form-control"
                   placeholder="الاسم الكامل / Nom complet"
                   type="text"
+                  onchange="handlechangename()"
                 />
               </div>
             </div>
@@ -61,12 +101,13 @@
             <div class="col_9">
               <div class="input">
                 <input
-                  required="required"
+                  required
                   name="phone"
                   id="phone"
                   class="form-control"
                   placeholder="الهاتف / téléphone"
                   type="text"
+                  onchange="return handlechangephone()"
                 />
               </div>
             </div>
@@ -83,11 +124,11 @@
               <div class="input">
                 <input
                   class="form-control"
-                  required="required"
                   name="city"
                   id="city"
                   placeholder="الولاية"
                   type="text"
+                  onchange="handlechangecity()"
                 />
               </div>
             </div>
@@ -104,11 +145,11 @@
               <div class="input">
                 <input
                   class="form-control"
-                  required="required"
                   name="province"
                   id="province"
                   placeholder="البلدية"
                   type="text"
+                  onchange="handlechangeprovince()"
                 />
               </div>
             </div>
@@ -116,9 +157,71 @@
         </div>
         <div class="es_form">
           <hr class="es_hr" />
-          <button class="es_button" id="myBtn">اشتري الأن</button>
+          <button class="es_button" id="myBtn" type="button">اشتري الأن</button>
         </div>
-      </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="carding">
+              <div class="top">
+                <div class="title">
+                  <p style="text-align: center; line-height: 1.5">
+                    <strong
+                      style="
+                        background-color: rgb(255, 0, 0);
+                        color: rgb(255, 255, 255);
+                      "
+                      class="text-right"
+                    >
+                      اشتري علبتين و احصل على الثالثة مجانا + توصيل مجاني للبيت
+                    </strong>
+                  </p>
+                  <p
+                    style="
+                      text-align: center;
+                      margin-top: 5rem;
+                      margin-bottom: 2rem;
+                    "
+                  >
+                    <span style="font-size: 16px"
+                      ><strong
+                        style="
+                          background-color: rgb(0, 0, 0);
+                          color: rgb(255, 255, 255);
+                        "
+                        class="text-left"
+                      >
+                        اشتري الآن قبل أن ينتهي العرض
+                      </strong></span
+                    >
+                  </p>
+                </div>
+                <div data-v-bd05d20e="" class="es_timer">00:00:00</div>
+              </div>
+              <hr />
+              <div class="bt">
+                <div class="buttom">
+                  <button
+                    style="background-color: rgb(4, 193, 0)"
+                    class="btin"
+                    id="btn1"
+                    type="button"
+                  >
+                    نعم نشري 2
+                  </button>
+                  <button
+                    style="background-color: rgb(255, 0, 0)"
+                    class="btin"
+                    id="btn2"
+                    type="button"
+                  >
+                    لا شكرا
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
     </div>
     <div class="phone">
       <img
@@ -133,6 +236,7 @@
           font-size: 25px;
           word-break: break-word;
           margin-top: 2rem;
+          margin: 0 2rem;
         "
       >
         تعبت من الصراصير و مالقيتش الحل ؟؟وش راك تسنى ؟؟
@@ -227,72 +331,7 @@
         data-mce-src="https://cdn.shopify.com/s/files/1/0659/0981/7571/files/cmnt2_480x480.png?v=1661287822"
       />
     </div>
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <div class="carding">
-          <div class="top">
-            <div class="title">
-              <p style="text-align: center; line-height: 1.5">
-                <strong
-                  style="
-                    background-color: rgb(255, 0, 0);
-                    color: rgb(255, 255, 255);
-                  "
-                  class="text-right"
-                >
-                  اشتري علبتين و احصل على الثالثة مجانا + توصيل مجاني للبيت
-                </strong>
-              </p>
-              <p
-                style="
-                  text-align: center;
-                  margin-top: 5rem;
-                  margin-bottom: 2rem;
-                "
-              >
-                <span style="font-size: 16px"
-                  ><strong
-                    style="
-                      background-color: rgb(0, 0, 0);
-                      color: rgb(255, 255, 255);
-                    "
-                    class="text-left"
-                  >
-                    اشتري الآن قبل أن ينتهي العرض
-                  </strong></span
-                >
-              </p>
-            </div>
-            <div data-v-bd05d20e="" class="es_timer">00:00:00</div>
-          </div>
-          <hr />
-          <div class="bt">
-            <div class="buttom">
-              <span class="special">عرض خاص</span>
-              <div class="pricing_holder">
-                <div class="one">دج 4,600.00</div>
-                <div class="two">دج 82,000.00</div>
-              </div>
-              <button
-                style="background-color: rgb(4, 193, 0)"
-                class="btin"
-                id="btn1"
-              >
-                نعم نشري 2
-              </button>
-              <button
-                style="background-color: rgb(255, 0, 0)"
-                class="btin"
-                id="btn2"
-              >
-                لا شكرا
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <div id="myModal2" class="modal2">
       <div class="modal-content2">
         <span class="close2">&times;</span>
@@ -683,6 +722,9 @@
       // Get the modal
       var modal = document.getElementById("myModal");
       var modal2 = document.getElementById("myModal2");
+      var content = document.getElementsByClassName("content")[0];
+      const XHR = new XMLHttpRequest();
+      const FD = new FormData();
 
       // Get the button that opens the modal
       var btn = document.getElementById("myBtn");
@@ -690,27 +732,50 @@
       var btn2 = document.getElementById("btn2");
 
       // Get the <span> element that closes the modal
-      var span = document.getElementsByClassName("close")[0];
       var span2 = document.getElementsByClassName("close2")[0];
+
+      let phoneinput = document.getElementById("phone");
 
       // When the user clicks the button, open the modal
       btn.onclick = function () {
-        modal.style.display = "block";
+        if (phone === null) {
+          alert("رقم الهاتف ضروري");
+        } else {
+          modal.style.display = "block";
+        }
+
+        /*content.classList.add("blur");*/
       };
 
       // When the user clicks on <span> (x), close the modal
-      span.onclick = function () {
-        modal.style.display = "none";
-        modal2.style.display = "block";
-      };
       span2.onclick = function () {
         modal2.style.display = "none";
       };
+
+      let formul = document.getElementById("formulaire");
+
       btn1.onclick = function () {
+        let prod = 3;
+        let element = document.createElement("INPUT");
+        element.setAttribute("type", "text");
+        element.setAttribute("value", prod);
+        element.setAttribute("name", "produit");
+        formul.appendChild(element);
+        formul.submit();
         modal.style.display = "none";
         modal2.style.display = "block";
       };
+
       btn2.onclick = function () {
+        const evt = new Event("submit", { bubbles: true, cancelable: false });
+        let prod = 1;
+        let element = document.createElement("INPUT");
+        element.setAttribute("type", "text");
+        element.setAttribute("value", prod);
+        element.setAttribute("name", "produit");
+        formul.appendChild(element);
+        formul.dispatchEvent(evt);
+        //formul.submit();
         modal.style.display = "none";
         modal2.style.display = "block";
       };
@@ -722,6 +787,34 @@
           modal2.style.display = "none";
         }
       };
+
+      let first_name = null;
+      let phone = null;
+      let city = null;
+      let province = null;
+      function handlechangename() {
+        first_name = document.getElementById("first_name").value;
+      }
+      function handlechangephone() {
+        phone = document.getElementById("phone").value;
+        /*var form = document.createElement("form");
+        form.method = "POST";
+        form.action =
+          "https://script.google.com/macros/s/AKfycbxLohNDl8Of4ikO8mNlnrcyyRAMdsd89nseaBEXMg8E1H28UYzcQMqGSsrxhYTBw5Kz/exec";
+        let input = document.createElement("input");
+        input.type = "text";
+        input.value = phone;
+        input.name = "phone";
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.submit();*/
+      }
+      function handlechangecity() {
+        city = document.getElementById("city").value;
+      }
+      function handlechangeprovince() {
+        province = document.getElementById("province").value;
+      }
     </script>
   </body>
 </html>
