@@ -720,7 +720,26 @@
         </div>
       </div>
     </div>
+    <button class="sticky" id="sticky" onclick="gotop()">اشتري الأن</button>
     <script>
+      function gotop() {
+        document.body.scrollTop = 300;
+        document.documentElement.scrollTop = 300;
+      }
+      let stickybutton = document.getElementById("sticky");
+      window.onscroll = function () {
+        scrolling();
+      };
+      function scrolling() {
+        if (
+          document.body.scrollTop > 800 ||
+          document.documentElement.scrollTop > 800
+        ) {
+          stickybutton.style.display = "block";
+        } else {
+          stickybutton.style.display = "none";
+        }
+      }
       function timer() {
         document.getElementById("timer").innerHTML = 5 + ":" + 00;
         startTimer();
